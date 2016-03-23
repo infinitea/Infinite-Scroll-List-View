@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="5dp" >
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="24sp"
+            android:text="ID"/>
+        <RelativeLayout
+            android:layout_below="@id/id"
+            android:id="@+id/sender_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="50%">
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:text="FROM"/>
+            <TextView
+                android:id="@+id/sender"
+                android:layout_below="@id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:text="sender"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/recipient_container"
+            android:layout_below="@id/id"
+            android:layout_toRightOf="@id/sender_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="50%"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:text="TO"/>
+            <TextView
+                android:id="@+id/recipient"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/to"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:text="recipient"/>
+            <TextView
+                android:id="@+id/amount"
+                android:layout_below="@id/recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20sp"
+                android:text="amount"/>
+            <TextView
+                android:id="@+id/currency"
+                android:layout_below="@id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="currency"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/created"
+            android:layout_below="@id/recipient_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="created"/>
+        <TextView
+            android:id="@+id/note"
+            android:layout_below="@id/created"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="note"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.v7.widget.CardView>
